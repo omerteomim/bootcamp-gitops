@@ -7,11 +7,11 @@ spec:
     - list:
         elements:
           - namespace: dev
-            valuefile: environments/dev/values.yaml
+            valuefile: environments/dev/values.yml
           - namespace: staging
-            valuefile: environments/staging/values.yaml
+            valuefile: environments/staging/values.yml
           - namespace: prod
-            valuefile: environments/prod/values.yaml
+            valuefile: environments/prod/values.yml
   template:
     metadata:
       name: 'chart-psychometric-{{ namespace }}'
