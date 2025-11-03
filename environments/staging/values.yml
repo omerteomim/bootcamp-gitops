@@ -1,5 +1,5 @@
 backend:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: omerteomim/backend
     tag: staging
@@ -14,7 +14,7 @@ backend:
       cpu: "250m"
       memory: "128Mi"
 frontend:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: omerteomim/frontend
     tag: staging
@@ -30,3 +30,6 @@ frontend:
       memory: "128Mi"
 ingress:
   host: staging.teomim.site
+
+namespace:
+  name: psychometry-app-staging

@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: psychometry-app
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - env: dev
+            namespace: psychometry-app-dev
+          - env: staging
+            namespace: psychometry-app-staging
+          - env: prod
+            namespace: psychometry-app-prod
+  template:
+    metadata:
+      name: psychometry-app-{{env}}
+    spec:
+      project: default
+      sources:
+        - repoURL: https://github.com/omerteomim/bootcamp-project.git
+          targetRevision: HEAD
+          path: chart-psychometric
+          helm:
+            valueFiles:
+              - $values/environments/prod/values.yml
+
+        - repoURL: https://github.com/omerteomim/bootcamp-gitops.git
+          targetRevision: HEAD
+          ref: values
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{namespace}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

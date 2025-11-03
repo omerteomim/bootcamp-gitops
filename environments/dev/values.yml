@@ -1,5 +1,5 @@
 backend:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: omerteomim/backend
     tag: dev
@@ -14,7 +14,7 @@ backend:
       cpu: "100m"
       memory: "64Mi"
 frontend:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: omerteomim/frontend
     tag: dev
@@ -30,3 +30,6 @@ frontend:
       memory: "64Mi"
 ingress:
   host: dev.teomim.site
+
+namespace:
+  name: psychometry-app-dev
