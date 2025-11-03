@@ -33,3 +33,25 @@ ingress:
 
 namespace:
   name: psychometry-app-prod
+  
+externalsecrets:
+  - secretkey: GROQ_API_KEY
+    remoteRef:
+      key: prod/psychometry-app/groq_api_key
+      property: GROQ_API_KEY
+  - secretkey: SUPABASE_URL
+    remoteRef:
+      key: prod/psychometry-app/supabase_url
+      property: SUPABASE_URL
+  - secretkey: SUPABASE_KEY
+    remoteRef:
+      key: prod/psychometry-app/supabase_key
+      property: SUPABASE_KEY
+  - secretkey: SUPABASE_SERVICE_ROLE_KEY
+    remoteRef:
+      key: prod/psychometry-app/supabase_service_role_key
+      property: SUPABASE_SERVICE_ROLE_KEY
+  - secretkey: SECRET_KEY
+    remoteRef:
+      key: prod/psychometry-app/secret_key
+      property: SECRET_KEY
