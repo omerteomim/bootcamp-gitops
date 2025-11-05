@@ -34,7 +34,7 @@ ingress:
 namespace:
   name: psychometry-app-prod
   
-externalsecrets:
+externalSecrets:
   data:
     - secretkey: GROQ_API_KEY
       remoteRef:
