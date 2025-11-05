@@ -36,18 +36,18 @@ namespace:
   
 externalSecrets:
   data:
-    - secretkey: GROQ_API_KEY
+    - secretKey: GROQ_API_KEY
       remoteRef:
         key: prod/psychometry-app/groq_api_key
-    - secretkey: SUPABASE_URL
+    - secretKey: SUPABASE_URL
       remoteRef:
         key: prod/psychometry-app/supabase_url
-    - secretkey: SUPABASE_KEY
+    - secretKey: SUPABASE_KEY
       remoteRef:
         key: prod/psychometry-app/supabase_key
-    - secretkey: SUPABASE_SERVICE_ROLE_KEY
+    - secretKey: SUPABASE_SERVICE_ROLE_KEY
       remoteRef:
         key: prod/psychometry-app/supabase_service_role_key
-    - secretkey: SECRET_KEY
+    - secretKey: SECRET_KEY
       remoteRef:
         key: prod/psychometry-app/secret_key
