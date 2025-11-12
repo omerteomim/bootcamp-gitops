@@ -7,10 +7,10 @@ spec:
   generators:
     - list:
         elements:
-          # - env: dev
-          #   namespace: psychometry-app-dev
-          # - env: staging
-          #   namespace: psychometry-app-staging
+          - env: dev
+            namespace: psychometry-app-dev
+          - env: staging
+            namespace: psychometry-app-staging
           - env: prod
             namespace: psychometry-app-prod
   template:
