@@ -2,7 +2,7 @@ backend:
   replicaCount: 1
   image:
     repository: omerteomim/backend
-    tag: e1b69e12b80b7bf173727a509735fc3fd8a08a69
+    tag: 68a47ead1bb3482254b6c69974d35e450c2f5451
     pullPolicy: IfNotPresent
   service:
     port: 5000
@@ -17,7 +17,7 @@ frontend:
   replicaCount: 1
   image:
     repository: omerteomim/frontend
-    tag: e1b69e12b80b7bf173727a509735fc3fd8a08a69
+    tag: 68a47ead1bb3482254b6c69974d35e450c2f5451
     pullPolicy: IfNotPresent
   service:
     port: 80
